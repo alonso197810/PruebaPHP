@@ -1,0 +1,41 @@
+{% block content %}
+    <a href="/xml" class="btn">Servicio XML</a>
+  	<h1 class="page-title">Listado</h1>    
+    <form action="" method="post">
+      Email :
+      <input name="email" type="text"/>
+      <button type="submit"> Buscar</button>
+    </form>
+  	<table class="list">
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Email</th>
+  				<th>Position</th>
+          <th>Salary</th>
+          <th>Action</th>
+  			</tr>	
+  		</thead>
+      {% if results %}
+        <tbody>
+          {% for result in results %}
+            <tr>
+              <td>{{ result.name }}</td>
+              <td>{{ result.email }}</td>
+              <td>{{ result.position }}</td>
+              <td>{{ result.salary }}</td>
+              <td><a href="/view/{{result.id}}">View</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      {% else %}        
+        <tbody>
+          <tr>
+            <td colspan="4">
+              No hay datos
+            </td>
+          </tr>  
+        </tbody>  
+      {% endif %}      
+  	</table>	
+{% endblock %}

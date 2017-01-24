@@ -1,0 +1,6 @@
+vendor/
+log/*
+cache/*
+sass/*.cfg
+*.lock
+public/style.css

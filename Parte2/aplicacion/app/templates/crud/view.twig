@@ -1,0 +1,36 @@
+{% block content %}
+  <div id="primary" class="content-area">
+      <fieldset>
+        <p>
+          Name : {{post.name}}
+        </p>  
+        <p>
+          Email : {{post.email}}
+        </p>  
+        <p>
+          Phone : {{post.phone}}
+        </p>  
+        <p>
+          Address : {{post.address}}
+        </p>  
+        <p>
+          Position : {{post.position}}
+        </p>  
+        <p>
+          Salary : {{post.salary}}
+        </p>  
+        <p>
+          Skills
+          <ul>
+          {% for key, user in post.skills %}
+            <li>{{ user.skill}}</li>
+          {% endfor %}
+          </ul>
+        </p>  
+      </fieldset>    
+  </div>
+{% endblock %}  
+
+{% block sidebar %}{% endblock %}
+
+{% block footer_content %}{% endblock %}
