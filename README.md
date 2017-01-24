@@ -1,4 +1,5 @@
 # PruebaPHP
+Version de PHP requerida: 5.6.30
 Para usar este proyecto, primero clone el repositorio desde GitHub en la carpeta html de su servidor apache en su maquina local, a continuacion:
 <pre>
 Parte 1:
